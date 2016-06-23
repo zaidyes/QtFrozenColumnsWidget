@@ -1,18 +1,7 @@
 //--- include files -------------------------------------------------------------
-#include "Defines.hpp"
-
-#pragma warning_qt_push
 #include <QtGui/QtGui>
 #include "UI/CustomTableView.h"
 #include "CustomTableView.moc"
-#pragma warning_qt_pop
-
-
-namespace rtt {
-namespace plugin {
-namespace ui {
-
-
 
 CustomTableView::CustomTableView(QWidget *parent/* = 0*/)
 {
@@ -218,8 +207,4 @@ void CustomTableView::onSortComplete()
 {
 	for( int i = 0 ; i+2 <= model()->rowCount() ; i = i+2)
 		m_frozenTvFirst->setSpan(i,0,2,1);	
-}
-
-}
-}
 }
